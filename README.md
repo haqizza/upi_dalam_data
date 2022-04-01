@@ -2,6 +2,15 @@
 
 A new Flutter project.
 
+Anggota Kelompok 1:
+
+- Aysha Alia I.
+- Hasna Nada F. K
+- M. Izzatul Haq
+- Ridzky Ardiasyah
+- Thorif M. Artanel
+
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
