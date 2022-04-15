@@ -2,7 +2,7 @@ import 'dart:js';
 
 import 'package:flutter/material.dart';
 import 'package:upi_dalam_data/screens/homepage.dart';
-import 'package:upi_dalam_data/screens/notification.dart';
+//import 'package:upi_dalam_data/screens/notification.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -11,7 +11,7 @@ void main() {
     initialRoute: '/',
     routes: {
       '/' : (context) => HomePage(),
-      '/notification': (context) => Notifications(),
+      //'/notification': (context) => Notifications(),
     },
   ));
 }
