@@ -43,11 +43,12 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
             Container(
-              padding: EdgeInsets.all(14),
+              padding: EdgeInsets.all(10),
               child :Row(mainAxisAlignment: MainAxisAlignment.center,
               children:[
                 Container(
-                  padding: EdgeInsets.all(14),
+                  decoration: BoxDecoration(border: Border.all(color: Colors.red)),
+                  margin: EdgeInsets.all(14),
                   child: IconButton(
                           icon: const Icon(Icons.account_box_outlined),
                           tooltip: 'Profil User',
@@ -57,7 +58,8 @@ class _HomePageState extends State<HomePage> {
                         ),
                 ),
                 Container(
-                  padding: EdgeInsets.all(14),
+                  decoration: BoxDecoration(border: Border.all(color: Colors.red)),
+                  margin: EdgeInsets.all(14),
                   child: IconButton(
                           icon: const Icon(Icons.account_box_outlined),
                           tooltip: 'Profil User',
@@ -67,7 +69,8 @@ class _HomePageState extends State<HomePage> {
                         ),
                 ),
                 Container(
-                  padding: EdgeInsets.all(14),
+                  decoration: BoxDecoration(border: Border.all(color: Colors.red)),
+                  margin: EdgeInsets.all(14),
                   child: IconButton(
                           icon: const Icon(Icons.account_box_outlined),
                           tooltip: 'Profil User',
@@ -77,7 +80,8 @@ class _HomePageState extends State<HomePage> {
                         ),
                 ),
                 Container(
-                  padding: EdgeInsets.all(14),
+                  decoration: BoxDecoration(border: Border.all(color: Colors.red)),
+                  margin: EdgeInsets.all(14),
                   child: IconButton(
                           icon: const Icon(Icons.account_box_outlined),
                           tooltip: 'Profil User',
