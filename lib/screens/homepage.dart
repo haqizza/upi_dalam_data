@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:upi_dalam_data/widgets/topbar.dart';
-
+import 'news.dart';
 
 
 class HomePage extends StatefulWidget {
