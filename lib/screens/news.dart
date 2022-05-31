@@ -7,7 +7,9 @@ import 'dart:convert';
 import 'package:flutter/services.dart' show rootBundle;
 
 class HomePage extends StatefulWidget {
-  const HomePage({Key? key,}) : super(key: key);
+  const HomePage({
+    Key? key,
+  }) : super(key: key);
 
   @override
   State<HomePage> createState() => _HomePageState();
@@ -16,13 +18,14 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   void initState() {
     super.initState();
-    WidgetsBinding.instance
-        .addPostFrameCallback((_) => readJson());
+    WidgetsBinding.instance?.addPostFrameCallback((_) => readJson());
   }
+
   List _items = [];
 
   Future<void> readJson() async {
-    final String response = await rootBundle.loadString('assets/data_berita.json');
+    final String response =
+        await rootBundle.loadString('assets/data_berita.json');
     final data = await json.decode(response);
     setState(() {
       _items = data["items"];
@@ -34,14 +37,12 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: TopBar(
         title: const Text('News',
-                      style: TextStyle(
-                      color: Colors.black,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 20,
-                    )),
-                    
-        appBar: AppBar(
-        ),
+            style: TextStyle(
+              color: Colors.black,
+              fontWeight: FontWeight.bold,
+              fontSize: 20,
+            )),
+        appBar: AppBar(),
         widgets: const <Widget>[Icon(Icons.abc_rounded)],
         isLeading: false,
         leading: Image.asset(
@@ -49,30 +50,38 @@ class _HomePageState extends State<HomePage> {
           // fit: BoxFit.fitHeight,
         ),
       ),
-
       body: Padding(
-        padding: const EdgeInsets.all(25),
-        child: Column(
-          children: [
+          padding: const EdgeInsets.all(25),
+          child: Column(
+            children: [
+              _items.isNotEmpty
+                  ? Expanded(
+                      child: ListView.builder(
+                      itemCount: _items.length,
+                      itemBuilder: (context, index) {
+                        return Card(
+                            margin: const EdgeInsets.all(10),
+                            child: ListTile(
+                              leading: Image.network(
+                                (() {
+                                  if (_items[index]["picture"].isEmpty) {
+                                    return "https://storage.googleapis.com/cv-skn-bucket/pemvis/kelompok-1/placeholder.png";
+                                  }
 
-            _items.isNotEmpty? Expanded(
-              child: ListView.builder(
-                itemCount: _items.length,
-                itemBuilder: (context, index) {
-                  return Card(
-                    margin: const EdgeInsets.all(10),
-                    child: ListTile(
-                      leading: Image.network("https://storage.googleapis.com/cv-skn-bucket/pemvis/kelompok-1/Picture1-4.png", fit: BoxFit.cover, height: 150, width: 150,),
-                      title: Text(_items[index]["judul"]),
-                      subtitle: Text(_items[index]["tanggal"]),
-                    )
-                  );
-                },)
-            )
-            : Container()
-        ],)
-      ),
-
+                                  return _items[index]["picture"];
+                                })(),
+                                fit: BoxFit.cover,
+                                height: 150,
+                                width: 150,
+                              ),
+                              title: Text(_items[index]["judul"]),
+                              subtitle: Text(_items[index]["tanggal"]),
+                            ));
+                      },
+                    ))
+                  : Container()
+            ],
+          )),
       bottomNavigationBar: BottomNavigationBar(
         selectedItemColor: const Color(0xFFFF0404),
         unselectedItemColor: const Color(0xff000000),
@@ -80,17 +89,11 @@ class _HomePageState extends State<HomePage> {
         showUnselectedLabels: false,
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-            icon: Icon(Icons.home_outlined),
-            label: 'Home'
-          ),
+              icon: Icon(Icons.home_outlined), label: 'Home'),
           BottomNavigationBarItem(
-            icon: Icon(Icons.insights_outlined),
-            label: 'Dashboard'
-          ),
+              icon: Icon(Icons.insights_outlined), label: 'Dashboard'),
           BottomNavigationBarItem(
-            icon: Icon(Icons.view_quilt_outlined),
-            label: 'Highlight'
-          ),
+              icon: Icon(Icons.view_quilt_outlined), label: 'Highlight'),
           BottomNavigationBarItem(
             icon: Icon(Icons.notifications_outlined),
             label: 'Notifications',
@@ -100,4 +103,3 @@ class _HomePageState extends State<HomePage> {
     );
   }
 }
-
