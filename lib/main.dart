@@ -3,6 +3,7 @@ import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:upi_dalam_data/screens/homepage.dart';
 import 'package:upi_dalam_data/screens/notifications.dart';
+import 'package:upi_dalam_data/widgets/topbar.dart';
 
 void main() {
   runApp(const MainApp());
@@ -19,10 +20,18 @@ class MainApp extends StatefulWidget {
 
 class MainAppState extends State<MainApp> {
   int idx = 0;
+  String topbarTitle = "";
+  
   void onItemTap(int index) {
     log(index.toString());
     setState(() {
       idx = index;
+    });
+  }
+
+  void setTitle(String title) {
+    setState(() {
+      topbarTitle = title;
     });
   }
 
@@ -32,6 +41,11 @@ class MainAppState extends State<MainApp> {
       debugShowCheckedModeBanner: false,
       title: 'UPI Dalam Data',
       home: Scaffold(
+        appBar: TopBar(
+          title: topbarTitle,
+          appBar: AppBar(),
+          isLogo: false,
+        ),
         body: tabSelect(idx),
         bottomNavigationBar: BottomNavigationBar(
           currentIndex: idx,
@@ -66,7 +80,7 @@ class MainAppState extends State<MainApp> {
   tabSelect(int idx) {
     switch (idx) {
       case 0: {
-        return const HomePage();
+        return HomePage(setTitle: setTitle);
       }
       case 1: {
         return const Notifications();

@@ -1,13 +1,25 @@
 import 'package:flutter/material.dart';
-import 'package:upi_dalam_data/widgets/topbar.dart';
 import 'news.dart';
 
 
-class HomePage extends StatelessWidget {
-  const HomePage({Key? key,}) : super(key: key);
+class HomePage extends StatefulWidget {
+  final Function(String) setTitle;
+  
+  const HomePage( {
+    required this.setTitle,
+    Key? key,
+  }) : super(key: key);
 
-  // @override
-  // State<HomePage> createState() => _HomePageState();
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+  
+class _HomePageState extends State <HomePage>{
+  @override
+  void initState() {
+    super.initState();
+    widget.setTitle('Home Page');
+  }
 
   @override
   Widget build(BuildContext context) {
