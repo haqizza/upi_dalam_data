@@ -57,6 +57,12 @@ class _HomePageState extends State<HomePage> {
                         return Card(
                             margin: const EdgeInsets.all(10),
                             child: ListTile(
+                              onTap: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(builder: (context) => const SecondRoute()),
+                                );
+                              },
                               leading: Image.network(
                                 (() {
                                   if (_items[index]["picture"].isEmpty) {
@@ -77,6 +83,22 @@ class _HomePageState extends State<HomePage> {
                   : Container()
             ],
           )),
+    );
+  }
+}
+
+class SecondRoute extends StatelessWidget {
+  const SecondRoute({key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text(''),
+      ),
+      body: Center(
+        
+      ),
     );
   }
 }
