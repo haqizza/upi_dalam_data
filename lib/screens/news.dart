@@ -43,12 +43,7 @@ class _HomePageState extends State<HomePage> {
               fontSize: 20,
             )),
         appBar: AppBar(),
-        widgets: const <Widget>[Icon(Icons.abc_rounded)],
-        isLeading: false,
-        leading: Image.asset(
-          'images/logoUPI_32.png',
-          // fit: BoxFit.fitHeight,
-        ),
+        isLogo: false,
       ),
       body: Padding(
           padding: const EdgeInsets.all(25),
@@ -82,24 +77,6 @@ class _HomePageState extends State<HomePage> {
                   : Container()
             ],
           )),
-      bottomNavigationBar: BottomNavigationBar(
-        selectedItemColor: const Color(0xFFFF0404),
-        unselectedItemColor: const Color(0xff000000),
-        showSelectedLabels: false,
-        showUnselectedLabels: false,
-        items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-              icon: Icon(Icons.home_outlined), label: 'Home'),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.insights_outlined), label: 'Dashboard'),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.view_quilt_outlined), label: 'Highlight'),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.notifications_outlined),
-            label: 'Notifications',
-          ),
-        ],
-      ),
     );
   }
 }

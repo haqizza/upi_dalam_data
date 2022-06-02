@@ -1,0 +1,28 @@
+{
+    "notifications" : [
+        {
+            "id": "nf11000",
+            "title": "Alert",
+            "desc": "Alert",
+            "datetime": "2022-05-11 20:55:16.008",
+            "image": "",
+            "url": ""
+        },
+        {
+            "id": "nf15012",
+            "title": "Alert",
+            "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer in ex nec lacus porta hendrerit. Curabitur condimentum purus vitae purus cursus fringilla. Maecenas imperdiet at justo non egestas. ",
+            "datetime": "2022-05-15 20:55:16.008",
+            "image": "",
+            "url": ""
+        },
+        {
+            "id": "nf21004",
+            "title": "Information",
+            "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer in ex nec lacus porta hendrerit. Curabitur condimentum purus vitae purus cursus fringilla. Maecenas imperdiet at justo non egestas. Morbi dignissim orci arcu, sed suscipit felis tempus tempus. Quisque eleifend malesuada est, sed placerat augue efficitur sit amet. Mauris viverra leo lorem, in fermentum mauris convallis ac. Aenean non velit convallis, egestas purus a, accumsan nibh. Integer mollis turpis at sodales vestibulum. Etiam ac ante et turpis ultricies cursus at eget lorem. Quisque libero mi, semper eu urna a, iaculis dignissim orci. Mauris porttitor dui leo, vehicula iaculis erat lacinia vel. Aliquam lacus sem, accumsan sed ex ut, facilisis malesuada ex. Vivamus placerat neque dui, sit amet ullamcorper felis maximus in. Praesent suscipit molestie feugiat. Vestibulum dictum, urna eu tristique commodo, tortor libero ornare neque, placerat euismod dui mauris a tortor.",
+            "datetime": "2022-05-21 20:55:16.008",
+            "image": "",
+            "url": ""
+        }
+    ]
+}

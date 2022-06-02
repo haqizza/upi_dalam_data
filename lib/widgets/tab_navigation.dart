@@ -1,46 +1,21 @@
 import 'package:flutter/material.dart';
-import 'package:upi_dalam_data/widgets/topbar.dart';
 
+class TabNavigation extends StatelessWidget {
+  final Function onTapFunction;
 
-
-class TabNavigation extends StatefulWidget {
-  const TabNavigation({Key? key,}) : super(key: key);
-
-
-  @override
-  State<TabNavigation> createState() => _TabNavigationState();
-}
-
-class _TabNavigationState extends State<TabNavigation> {
+  const TabNavigation({
+    Key? key,
+    required this.onTapFunction
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: TopBar(
-        title: const Text(''),
-        appBar: AppBar(),
-        widgets: const <Widget>[Icon(Icons.abc_rounded)],
-        isLeading: false,
-        leading: Image.asset(
-          'images/logoUPI_32.png',
-          // fit: BoxFit.fitHeight,
-        ),
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: const [
-            Text(
-              'You have pushed the button this many times:',
-            ),
-          ],
-        ),
-      ),
-      bottomNavigationBar: BottomNavigationBar(
+    return BottomNavigationBar(
         selectedItemColor: const Color(0xFFFF0404),
         unselectedItemColor: const Color(0xff000000),
         showSelectedLabels: false,
         showUnselectedLabels: false,
+        onTap: onTapFunction(),
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(Icons.home_outlined),
@@ -59,7 +34,6 @@ class _TabNavigationState extends State<TabNavigation> {
             label: 'Notifications'
           ),
         ],
-      ),
-    );
+      );
   }
 }

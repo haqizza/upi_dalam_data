@@ -4,17 +4,13 @@ class TopBar extends StatelessWidget implements PreferredSizeWidget{
   final Color backgroundColor = Colors.white;
   final Text title;
   final AppBar appBar;
-  final List<Widget> widgets;
-  final bool isLeading;
-  Widget? leading;
+  final bool isLogo;
 
   TopBar({
     Key? key,
     required this.title,
     required this.appBar,
-    required this.widgets,
-    required this.isLeading,
-    this.leading
+    required this.isLogo,
   }) : super(key: key);
 
   @override
@@ -23,8 +19,11 @@ class TopBar extends StatelessWidget implements PreferredSizeWidget{
       iconTheme: const IconThemeData(
         color: Colors.black
       ),
-      leading: isLeading ? leading : appBar.leading,
-      
+      leading: isLogo ? 
+        Image.asset('images/logoUPI_32.png',
+        // fit: BoxFit.fitHeight,
+        )
+        : appBar.leading,
       title: title,
       backgroundColor: backgroundColor,
       actions: [
