@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 
 class TopBar extends StatelessWidget implements PreferredSizeWidget{
   final Color backgroundColor = Colors.white;
-  final Text title;
+  final String title;
   final AppBar appBar;
   final bool isLogo;
 
-  TopBar({
+  const TopBar({
     Key? key,
     required this.title,
     required this.appBar,
@@ -24,7 +24,14 @@ class TopBar extends StatelessWidget implements PreferredSizeWidget{
         // fit: BoxFit.fitHeight,
         )
         : appBar.leading,
-      title: title,
+      title: Text(
+        title,
+        style: const TextStyle(
+          color: Colors.black,
+          fontWeight: FontWeight.bold,
+          fontSize: 20,
+        )
+      ),
       backgroundColor: backgroundColor,
       actions: [
         Padding(
