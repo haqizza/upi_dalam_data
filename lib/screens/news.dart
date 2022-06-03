@@ -16,6 +16,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  @override
   void initState() {
     super.initState();
     WidgetsBinding.instance?.addPostFrameCallback((_) => readJson());
@@ -36,12 +37,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: TopBar(
-        title: const Text('News',
-            style: TextStyle(
-              color: Colors.black,
-              fontWeight: FontWeight.bold,
-              fontSize: 20,
-            )),
+        title: 'News',
         appBar: AppBar(),
         isLogo: false,
       ),

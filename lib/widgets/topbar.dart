@@ -41,7 +41,7 @@ class TopBar extends StatelessWidget implements PreferredSizeWidget{
           ),
           child: ElevatedButton(
             onPressed: () => {
-              Navigator.pushNamed(context, '/')
+              Navigator.pop(context)
             },
             style: ElevatedButton.styleFrom(
               primary: const Color(0xFFFF0404),

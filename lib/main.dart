@@ -1,4 +1,5 @@
 import 'dart:developer';
+import 'dart:html';
 
 import 'package:flutter/material.dart';
 import 'package:upi_dalam_data/screens/homepage.dart';
@@ -13,9 +14,7 @@ class MainApp extends StatefulWidget {
   const MainApp({Key? key}) : super(key: key);
 
   @override
-  MainAppState createState() {
-    return MainAppState();
-  }
+  MainAppState createState() => MainAppState();
 }
 
 class MainAppState extends State<MainApp> {
@@ -23,7 +22,6 @@ class MainAppState extends State<MainApp> {
   String topbarTitle = "";
   
   void onItemTap(int index) {
-    log(index.toString());
     setState(() {
       idx = index;
     });
@@ -33,6 +31,7 @@ class MainAppState extends State<MainApp> {
     setState(() {
       topbarTitle = title;
     });
+    log('title' + topbarTitle + ' ' + title, name: 'title.test');
   }
 
   @override
@@ -44,7 +43,7 @@ class MainAppState extends State<MainApp> {
         appBar: TopBar(
           title: topbarTitle,
           appBar: AppBar(),
-          isLogo: false,
+          isLogo: true,
         ),
         body: tabSelect(idx),
         bottomNavigationBar: BottomNavigationBar(
@@ -82,8 +81,8 @@ class MainAppState extends State<MainApp> {
       case 0: {
         return HomePage(setTitle: setTitle);
       }
-      case 1: {
-        return const Notifications();
+      case 3: {
+        return Notifications(setTitle: setTitle);
       }
     }
   }
