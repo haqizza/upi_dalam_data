@@ -1,0 +1,16 @@
+{
+    "highlights" : [
+        {
+            "id": "a60c23b8-d57e-4042-83f3-7dd49816577d",
+            "title": "Robotics",
+            "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed facilisis magna lectus, vel scelerisque nisl hendrerit ac. Pellentesque in tellus varius ante dignissim venenatis ac at erat.",
+            "image": ""
+        },
+        {
+            "id": "82747b9d-e1a0-4a51-a08f-1d7d51700c68",
+            "title": "Programming",
+            "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed facilisis magna lectus, vel scelerisque nisl hendrerit ac. Pellentesque in tellus varius ante dignissim venenatis ac at erat.",
+            "image": ""
+        }
+    ]
+}
