@@ -47,7 +47,8 @@ class _DashboardDetailState extends State<DashboardDetail> {
           appBar: AppBar(),
           isLogo: false,
         ),
-        body: Container(
+        body: SingleChildScrollView(
+          child: Container(
           padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 16),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
@@ -77,6 +78,8 @@ class _DashboardDetailState extends State<DashboardDetail> {
               )
             ],
           ),
-        ));
+        )
+      )
+    );
   }
 }
