@@ -31,7 +31,6 @@ class MainAppState extends State<MainApp> {
     setState(() {
       topbarTitle = title;
     });
-    log('title' + topbarTitle + ' ' + title, name: 'title.test');
   }
 
   @override
