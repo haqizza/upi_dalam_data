@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:upi_dalam_data/screens/news_detail.dart';
 import 'package:upi_dalam_data/widgets/topbar.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'dart:async';
@@ -6,30 +7,30 @@ import 'package:http/http.dart' as http;
 import 'dart:convert';
 import 'package:flutter/services.dart' show rootBundle;
 
-class HomePage extends StatefulWidget {
-  const HomePage({
+class News extends StatefulWidget {
+  const News({
     Key? key,
   }) : super(key: key);
 
   @override
-  State<HomePage> createState() => _HomePageState();
+  State<News> createState() => _HomePageState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _HomePageState extends State<News> {
   @override
   void initState() {
     super.initState();
     WidgetsBinding.instance?.addPostFrameCallback((_) => readJson());
   }
 
-  List _items = [];
+  List _news = [];
 
   Future<void> readJson() async {
     final String response =
         await rootBundle.loadString('assets/data_berita.json');
     final data = await json.decode(response);
     setState(() {
-      _items = data["items"];
+      _news = data["news"];
     });
   }
 
@@ -45,56 +46,44 @@ class _HomePageState extends State<HomePage> {
           padding: const EdgeInsets.all(25),
           child: Column(
             children: [
-              _items.isNotEmpty
+              _news.isNotEmpty
                   ? Expanded(
                       child: ListView.builder(
-                      itemCount: _items.length,
+                      itemCount: _news.length,
                       itemBuilder: (context, index) {
                         return Card(
                             margin: const EdgeInsets.all(10),
                             child: ListTile(
-                              onTap: () {
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(builder: (context) => const SecondRoute()),
-                                );
-                              },
+                              onTap:  () async => await Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (
+                                  (context) => NewsDetail(
+                                    news: json.decode(_news[index]),
+                                  )
+                                )
+                              )
+                            ),
                               leading: Image.network(
                                 (() {
-                                  if (_items[index]["picture"].isEmpty) {
+                                  if (_news[index]["picture"].isEmpty) {
                                     return "https://storage.googleapis.com/cv-skn-bucket/pemvis/kelompok-1/placeholder.png";
                                   }
 
-                                  return _items[index]["picture"];
+                                  return _news[index]["picture"];
                                 })(),
                                 fit: BoxFit.cover,
                                 height: 150,
                                 width: 150,
                               ),
-                              title: Text(_items[index]["judul"]),
-                              subtitle: Text(_items[index]["tanggal"]),
+                              title: Text(_news[index]["judul"]),
+                              subtitle: Text(_news[index]["tanggal"]),
                             ));
                       },
                     ))
                   : Container()
             ],
           )),
-    );
-  }
-}
-
-class SecondRoute extends StatelessWidget {
-  const SecondRoute({key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text(''),
-      ),
-      body: Center(
-        
-      ),
     );
   }
 }

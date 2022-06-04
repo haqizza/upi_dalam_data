@@ -3,6 +3,7 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'news.dart';
+import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
 
 class HomePage extends StatefulWidget {
@@ -41,51 +42,73 @@ class _HomePageState extends State <HomePage>{
         ),
         Card(
           margin: const EdgeInsets.all(10),
-          child :Row(mainAxisAlignment: MainAxisAlignment.center,
+          child :Column(mainAxisAlignment: MainAxisAlignment.center,
           children:[
-            Container(
-              decoration: BoxDecoration(border: Border.all(color: Colors.red)),
-              margin: const EdgeInsets.all(14),
-              child: IconButton(
-                icon: const Icon(Icons.account_box_outlined),
-                tooltip: 'Profil User',
-                onPressed: () {
-                // kalau ditap
-                },
-              ),
-            ),
-            Container(
-              decoration: BoxDecoration(border: Border.all(color: Colors.red)),
-              margin: const EdgeInsets.all(14),
-              child: IconButton(
-                icon: const Icon(Icons.account_box_outlined),
-                tooltip: 'Profil User',
-                onPressed: () {
-                // kalau ditap
-                },
-              ),
-            ),
-            Container(
-              decoration: BoxDecoration(border: Border.all(color: Colors.red)),
-              margin: const EdgeInsets.all(14),
-              child: IconButton(
-                      icon: const Icon(Icons.account_box_outlined),
-                      tooltip: 'Profil User',
+                  Container(
+                    child :Row(mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Container(
+                    decoration: BoxDecoration(border: Border.all(color: Colors.red)),
+                    margin: const EdgeInsets.all(7),
+                    child: IconButton(
+                      icon: const Icon(MdiIcons.accountGroupOutline),
+                      tooltip: 'Info Mahasiswa',
                       onPressed: () {
                       // kalau ditap
                       },
                     ),
-            ),
-            Container(
-              decoration: BoxDecoration(border: Border.all(color: Colors.red)),
-              margin: const EdgeInsets.all(14),
-              child: IconButton(
-                icon: const Icon(Icons.account_box_outlined),
-                tooltip: 'Profil User',
-                onPressed: () {
-                // kalau ditap
-                },
-              ),
+                  ),
+                  Container(
+                    decoration: BoxDecoration(border: Border.all(color: Colors.red)),
+                    margin: const EdgeInsets.all(7),
+                    child: IconButton(
+                      icon: const Icon(MdiIcons.accountGroup),
+                      tooltip: 'Info Dosen',
+                      onPressed: () {
+                      // kalau ditap
+                      },
+                    ),
+                  ),
+                  Container(
+                    decoration: BoxDecoration(border: Border.all(color: Colors.red)),
+                    margin: const EdgeInsets.all(7),
+                    child: IconButton(
+                            icon: const Icon(MdiIcons.calendarTextOutline),
+                            tooltip: 'Event',
+                            onPressed: () {
+                            // kalau ditap
+                            },
+                          ),
+                  ),
+                  Container(
+                    decoration: BoxDecoration(border: Border.all(color: Colors.red)),
+                    margin: const EdgeInsets.all(7),
+                    child: IconButton(
+                      icon: const Icon(MdiIcons.domain),
+                      tooltip: 'Profile Fakultas',
+                      onPressed: () {
+                      // kalau ditap
+                      },
+                    ),
+                  ),
+                  Container(
+                      decoration: BoxDecoration(border: Border.all(color: Colors.red)),
+                      margin: const EdgeInsets.all(7),
+                      child: IconButton(
+                        icon: const Icon(MdiIcons.newspaperVariantMultipleOutline),
+                        tooltip: 'Berita',
+                        onPressed: () async => await Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (
+                                  (context) => News()
+                                )
+                              )
+                            ),
+                      ),
+                    )
+                  ]
+               )
             )
           ]
           )
