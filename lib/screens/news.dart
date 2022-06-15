@@ -24,6 +24,8 @@ class _HomePageState extends State<News> {
   }
 
   List _news = [];
+  // List _judul = [];
+  // List _isi = [];
 
   Future<void> readJson() async {
     final String response =
@@ -51,7 +53,7 @@ class _HomePageState extends State<News> {
                       child: ListView.builder(
                       itemCount: _news.length,
                       itemBuilder: (context, index) {
-                        return Card(
+                        return Container(
                             margin: const EdgeInsets.all(10),
                             child: ListTile(
                               onTap:  () async => await Navigator.push(

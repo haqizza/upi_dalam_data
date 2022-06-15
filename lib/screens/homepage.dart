@@ -3,6 +3,7 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'news.dart';
+import 'infoDosen.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
 
@@ -64,9 +65,14 @@ class _HomePageState extends State <HomePage>{
                     child: IconButton(
                       icon: const Icon(MdiIcons.accountGroup),
                       tooltip: 'Info Dosen',
-                      onPressed: () {
-                      // kalau ditap
-                      },
+                      onPressed: () async => await Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (
+                                  (context) => infoDosen()
+                                )
+                              )
+                            ),
                     ),
                   ),
                   Container(
