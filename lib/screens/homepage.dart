@@ -4,6 +4,7 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'news.dart';
 import 'infoDosen.dart';
+import 'event.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
 
@@ -81,9 +82,14 @@ class _HomePageState extends State <HomePage>{
                     child: IconButton(
                             icon: const Icon(MdiIcons.calendarTextOutline),
                             tooltip: 'Event',
-                            onPressed: () {
-                            // kalau ditap
-                            },
+                            onPressed: () async => await Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (
+                                  (context) => Event()
+                                )
+                              )
+                            ),
                           ),
                   ),
                   Container(
