@@ -69,7 +69,7 @@ class _HomePageState extends State <HomePage>{
                               context,
                               MaterialPageRoute(
                                 builder: (
-                                  (context) => infoDosen()
+                                  (context) => infoDosenPage()
                                 )
                               )
                             ),
