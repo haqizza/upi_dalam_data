@@ -2,31 +2,287 @@ import 'dart:html';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
-class infoDosenDetail extends StatefulWidget {
-  final Map notification;
-
+class infoDosenDetail extends StatelessWidget {
   const infoDosenDetail({
     Key? key,
-    required this.notification,
   }) : super(key: key);
 
   @override
-  State<infoDosenDetail> createState() => _infoDosenDetailState();
-}
-
-class _infoDosenDetailState extends State<infoDosenDetail> {
-  String text = "Jeremia Manogi Mario";
-  String tl = "Jakarta";
-  String ttl = "21 Desember 2000";
-  String gender = "Laki - laki";
-  
-  @override
   Widget build(BuildContext context) {
-   return ListView(
-     children: <Widget>[
-   ]);
+    return SafeArea(
+      child: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.symmetric(
+            horizontal: 30.0,
+          ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Padding(
+                padding: const EdgeInsets.symmetric(vertical: 30.0),
+                child: Row(
+                  children: [
+                    Image.asset('assets/images/reanu_keeves.png'),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 30.0),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: const [
+                          Text(
+                            'Keanu Reeves',
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              height: 2.0,
+                            ),
+                          ),
+                          Text(
+                            '4762504413',
+                            style: TextStyle(
+                              height: 2.0,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: const [
+                  Text(
+                    'Departemen / Program Studi :',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      height: 1.5,
+                    ),
+                  ),
+                  Text(
+                    'xxxxx',
+                    style: TextStyle(
+                      height: 1.5,
+                    ),
+                  ),
+                ],
+              ),
+              const SizedBox(height: 5),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: const [
+                  Text(
+                    'Status Ketenagakerjaan :',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      height: 1.5,
+                    ),
+                  ),
+                  Text(
+                    'Dosen / Tendik',
+                    style: TextStyle(
+                      height: 1.5,
+                    ),
+                  ),
+                ],
+              ),
+              const SizedBox(height: 5),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: const [
+                  Text(
+                    'Email :',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      height: 1.5,
+                    ),
+                  ),
+                  Text(
+                    'xxxxx@upi.edu',
+                    style: TextStyle(
+                      height: 1.5,
+                    ),
+                  ),
+                ],
+              ),
+              const SizedBox(height: 5),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: const [
+                  Text(
+                    'Mata Kuliah yang Diampu :',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      height: 1.5,
+                    ),
+                  ),
+                  Text(
+                    '1. ___________________',
+                    style: TextStyle(
+                      height: 1.5,
+                    ),
+                  ),
+                  Text(
+                    '2. ___________________',
+                    style: TextStyle(
+                      height: 1.5,
+                    ),
+                  ),
+                  Text(
+                    '3. ___________________',
+                    style: TextStyle(
+                      height: 1.5,
+                    ),
+                  ),
+                ],
+              ),
+              const SizedBox(height: 5),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: const [
+                  Text(
+                    'Riwayat Pendidikan :',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      height: 1.5,
+                    ),
+                  ),
+                  Text(
+                    '1. ___________________',
+                    style: TextStyle(
+                      height: 1.5,
+                    ),
+                  ),
+                  Text(
+                    '2. ___________________',
+                    style: TextStyle(
+                      height: 1.5,
+                    ),
+                  ),
+                  Text(
+                    '3. ___________________',
+                    style: TextStyle(
+                      height: 1.5,
+                    ),
+                  ),
+                ],
+              ),
+              const SizedBox(height: 5),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: const [
+                  Text(
+                    'Penelitian / Jurnal :',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      height: 1.5,
+                    ),
+                  ),
+                  Text(
+                    '1. ___________________',
+                    style: TextStyle(
+                      height: 1.5,
+                    ),
+                  ),
+                  Text(
+                    '2. ___________________',
+                    style: TextStyle(
+                      height: 1.5,
+                    ),
+                  ),
+                  Text(
+                    '3. ___________________',
+                    style: TextStyle(
+                      height: 1.5,
+                    ),
+                  ),
+                  Text(
+                    '4. Selengkapnya...',
+                    style: TextStyle(
+                      height: 1.5,
+                    ),
+                  ),
+                ],
+              ),
+              const SizedBox(height: 5),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: const [
+                  Text(
+                    'Pengalaman Pengabdian Kepada Masyarakat :',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      height: 1.5,
+                    ),
+                  ),
+                  Text(
+                    '1. ___________________',
+                    style: TextStyle(
+                      height: 1.5,
+                    ),
+                  ),
+                  Text(
+                    '2. ___________________',
+                    style: TextStyle(
+                      height: 1.5,
+                    ),
+                  ),
+                  Text(
+                    '3. ___________________',
+                    style: TextStyle(
+                      height: 1.5,
+                    ),
+                  ),
+                  Text(
+                    '4. Selengkapnya...',
+                    style: TextStyle(
+                      height: 1.5,
+                    ),
+                  ),
+                ],
+              ),
+              const SizedBox(height: 5),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: const [
+                  Text(
+                    'Penghargaan Yang Pernah Diraih :',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      height: 1.5,
+                    ),
+                  ),
+                  Text(
+                    '1. ___________________',
+                    style: TextStyle(
+                      height: 1.5,
+                    ),
+                  ),
+                  Text(
+                    '2. ___________________',
+                    style: TextStyle(
+                      height: 1.5,
+                    ),
+                  ),
+                  Text(
+                    '3. ___________________',
+                    style: TextStyle(
+                      height: 1.5,
+                    ),
+                  ),
+                  Text(
+                    '4. Selengkapnya...',
+                    style: TextStyle(
+                      height: 1.5,
+                    ),
+                  ),
+                ],
+              ),
+              const SizedBox(height: 5),
+            ],
+          ),
+        ),
+      ),
+    );
   }
-    
 }
 
 

@@ -9,6 +9,7 @@ import 'package:upi_dalam_data/screens/dashboards.dart';
 import 'package:upi_dalam_data/widgets/topbar.dart';
 import 'package:upi_dalam_data/screens/infoDosen.dart';
 import 'package:upi_dalam_data/screens/infoFakultas.dart';
+import 'package:upi_dalam_data/screens/infoFakultas_Detail.dart';
 
 void main() {
   runApp(const MainApp());
