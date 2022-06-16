@@ -3,58 +3,8 @@
         {
             "id": "f06501b2-b8a3-44b2-9fe3-3a98d8480598",
             "title": "Grafik Sejarah Keketatan Penerimaan Mahasiswa",
-            "desc": "Sejarah keketatan penerimaan mahasiswa FPMIPA UPI dari tahun 2017-2022",
-            "datetime": "2022-06-03 13:56:03.585",
-            "graph_title": "Fakultas Matematika dan Ilmu Pengetahuan Alam",
-            "graphs": [
-                {
-                    "title": "Fakultas Matematika dan Ilmu Pengetahuan Alam",
-                    "datas": [
-                        {
-                            "year": "2017",
-                            "SNMPTN": 18,
-                            "SBMPTN": 17,
-                            "SMUPI": 7
-                        },
-                        {
-                            "year": "2018",
-                            "SNMPTN": 29,
-                            "SBMPTN": 29,
-                            "SMUPI": 11
-                        },
-                        {
-                            "year": "2019",
-                            "SNMPTN": 18,
-                            "SBMPTN": 17,
-                            "SMUPI": 7
-                        },
-                        {
-                            "year": "2020",
-                            "SNMPTN": 18,
-                            "SBMPTN": 11,
-                            "SMUPI": 8
-                        },
-                        {
-                            "year": "2021",
-                            "SNMPTN": 20,
-                            "SBMPTN": 12,
-                            "SMUPI": 4
-                        },
-                        {
-                            "year": "2022",
-                            "SNMPTN": 18,
-                            "SBMPTN": 0,
-                            "SMUPI": 0
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "id": "ddd9ce3d-2f7e-453c-82c3-f2b40feb1e1d",
-            "title": "Grafik Dosen",
-            "desc": "Grafik berkaitan dengan informasi tentang dosen dari 2020-2021, grafik berisi data seperti : \n- Rasio Dosen Berdasarkan Jabatan Fungsional \n- Rasio Dosen Berdasarkan Jenjang Pendidikan Terakhir \n- Rasio Dosen Berdasarkan Gender",
-            "datetime": "2022-05-15 20:55:16.008"
+            "desc": "Sejarah keketatan penerimaan mahasiswa UPI dari tahun 2020-2021",
+            "datetime": "2022-06-03 13:56:03.585"
         }
     ]
 }

@@ -21,6 +21,8 @@ class _HighlightDetailState extends State<HighlightDetail> {
   @override
   void initState() {
     super.initState();
+
+    // Initing new controller
     _controller = VideoPlayerController.network(
       widget.highlight['video'],
     )..initialize().then((_) {
@@ -31,11 +33,21 @@ class _HighlightDetailState extends State<HighlightDetail> {
   }
 
   @override
+  void dispose() {
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: TopBar(
         title: 'Highlight',
-        appBar: AppBar(),
+        appBar: AppBar(
+          leading: BackButton(onPressed: () {
+            _controller.dispose();
+            Navigator.of(context).pop();
+          }),
+        ),
         isLogo: false,
       ),
       body: FutureBuilder(
@@ -94,11 +106,5 @@ class _HighlightDetailState extends State<HighlightDetail> {
         },
       ),
     );
-  }
-
-  @override
-  void dispose() {
-    _controller.dispose();
-    super.dispose();
   }
 }
