@@ -33,17 +33,18 @@ class NewsDetail extends StatelessWidget {
               subtitle: Container(
                 padding: EdgeInsets.all(4),
                 child: Html(
-                  data: """<div>
-                      <h1>news</h1>
-                      <p>This is a fantastic product that you should buy!</p>
-                      <h3>Features</h3>
-                      <ul>
-                        <li>It actually works</li>
-                        <li>It exists</li>
-                        <li>It doesn't cost much!</li>
-                      </ul>
-                      <!--You can pretty much put any html in here!-->
-                    </div>""",
+                  data: news["judul"]
+                  // """<div>
+                  //     news["judul"]
+                  //     <p>This is a fantastic product that you should buy!</p>
+                  //     <h3>Features</h3>
+                  //     <ul>
+                  //       <li>It actually works</li>
+                  //       <li>It exists</li>
+                  //       <li>It doesn't cost much!</li>
+                  //     </ul>
+                  //     <!--You can pretty much put any html in here!-->
+                  //   </div>""",
                   //shrinkToFit: true,
                 )
               )
