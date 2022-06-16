@@ -63,7 +63,7 @@ class _HighlightsState extends State<Highlights> {
                             HighlightDetail(highlight: _highlights[index])))),
                 child: Container(
                   padding:
-                      const EdgeInsets.symmetric(vertical: 2, horizontal: 4),
+                      const EdgeInsets.symmetric(vertical: 4, horizontal: 8),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -71,10 +71,23 @@ class _HighlightsState extends State<Highlights> {
                       Padding(
                           padding: const EdgeInsets.symmetric(
                               vertical: 0, horizontal: 8),
-                          child: Text(_highlights[index]['title'],
-                              overflow: TextOverflow.ellipsis,
-                              style: const TextStyle(
-                                  fontWeight: FontWeight.bold))),
+                          child: Text(
+                            _highlights[index]['title'],
+                            overflow: TextOverflow.ellipsis,
+                            style: const TextStyle(
+                                fontWeight: FontWeight.bold, fontSize: 18),
+                          )),
+                      Container(
+                        padding: const EdgeInsetsDirectional.only(top: 10),
+                        child: ClipRRect(
+                          borderRadius: const BorderRadius.only(
+                            topLeft: Radius.circular(8.0),
+                            topRight: Radius.circular(8.0),
+                          ),
+                          child: Image.network(_highlights[index]['thumbnail'],
+                              width: 300, height: 150, fit: BoxFit.fitWidth),
+                        ),
+                      ),
                       Padding(
                           padding: const EdgeInsets.all(8),
                           child: Text(
