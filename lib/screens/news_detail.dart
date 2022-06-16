@@ -34,7 +34,7 @@ class NewsDetail extends StatelessWidget {
                 padding: EdgeInsets.all(4),
                 child: Html(
                   data: """<div>
-                      <h1>Demo Page</h1>
+                      <h1>news</h1>
                       <p>This is a fantastic product that you should buy!</p>
                       <h3>Features</h3>
                       <ul>
