@@ -7,6 +7,8 @@ import 'package:upi_dalam_data/screens/notifications.dart';
 import 'package:upi_dalam_data/screens/highlights.dart';
 import 'package:upi_dalam_data/screens/dashboards.dart';
 import 'package:upi_dalam_data/widgets/topbar.dart';
+import 'package:upi_dalam_data/screens/infoDosen.dart';
+import 'package:upi_dalam_data/screens/infoFakultas.dart';
 
 void main() {
   runApp(const MainApp());
