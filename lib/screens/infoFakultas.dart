@@ -34,7 +34,7 @@ class _infoFakultasPageState extends State<infoFakultasPage> {
         automaticallyImplyLeading: true,
         leading: const BackButton(),
         title: const Text(
-          '[ Judul Screen ]',
+          'info Fakultas',
           style: TextStyle(
             fontFamily: 'Roboto',
             fontSize: 16,

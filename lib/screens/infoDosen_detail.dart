@@ -22,7 +22,7 @@ class infoDosenDetail extends StatelessWidget {
                 padding: const EdgeInsets.symmetric(vertical: 30.0),
                 child: Row(
                   children: [
-                    Image.asset('assets/images/reanu_keeves.png'),
+                    Image.network('https://storage.googleapis.com/cv-skn-bucket/pemvis/kelompok-1/reanu_keeves.png'),
                     Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 30.0),
                       child: Column(

@@ -31,28 +31,28 @@ class _infoDosenPageState extends State<infoDosenPage> {
       tahunMengajar: '1998 - 2014',
       jurusan: 'Teknik Perfilman',
       status: 'Dosen',
-      gambar: 'assets/images/reanu_keeves.png',
+      gambar: 'https://storage.googleapis.com/cv-skn-bucket/pemvis/kelompok-1/reanu_keeves.png',
     ),
     DosenItem(
       nama: 'Reanu Keeves',
       tahunMengajar: '1998 - 2014',
       jurusan: 'Teknik Perfilman',
       status: 'Dosen',
-      gambar: 'assets/images/reanu_keeves.png',
+      gambar: 'https://storage.googleapis.com/cv-skn-bucket/pemvis/kelompok-1/reanu_keeves.png',
     ),
     DosenItem(
       nama: 'Ujang Keeves',
       tahunMengajar: '1998 - 2014',
       jurusan: 'Teknik Perfilman',
       status: 'Dosen',
-      gambar: 'assets/images/reanu_keeves.png',
+      gambar: 'https://storage.googleapis.com/cv-skn-bucket/pemvis/kelompok-1/reanu_keeves.png',
     ),
     DosenItem(
       nama: 'Jajang Keeves',
       tahunMengajar: '1998 - 2014',
       jurusan: 'Teknik Perfilman',
       status: 'Dosen',
-      gambar: 'assets/images/reanu_keeves.png',
+      gambar: 'https://storage.googleapis.com/cv-skn-bucket/pemvis/kelompok-1/reanu_keeves.png',
     ),
   ];
 

@@ -59,15 +59,15 @@ class _DetailBiodataFakultasState extends State<DetailBiodataFakultas> {
                     SizedBox(
                       height: 10.0,
                     ),
-                    Text('Alamat : _______________'),
+                    Text('Alamat : jln. cibogo, no 20. Kota bandung'),
                   ],
                 ),
               ),
               const SizedBox(
                 height: 10.0,
               ),
-              Image.asset(
-                'assets/images/sampul_upi.png',
+              Image.network(
+                'https://storage.googleapis.com/cv-skn-bucket/pemvis/kelompok-1/banner_dosen.jpeg',
                 fit: BoxFit.cover,
                 width: MediaQuery.of(context).size.width,
               ),
