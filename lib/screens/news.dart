@@ -61,7 +61,7 @@ class _HomePageState extends State<News> {
                               MaterialPageRoute(
                                 builder: (
                                   (context) => NewsDetail(
-                                    news: json.decode(_news[index]),
+                                    news: _news[index],
                                   )
                                 )
                               )
