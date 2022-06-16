@@ -13,10 +13,10 @@ class Event extends StatefulWidget {
   }) : super(key: key);
 
   @override
-  State<Event> createState() => _HomePageState();
+  State<Event> createState() => _EventState();
 }
 
-class _HomePageState extends State<Event> {
+class _EventState extends State<Event> {
   @override
   void initState() {
     super.initState();
@@ -29,7 +29,7 @@ class _HomePageState extends State<Event> {
 
   Future<void> readJson() async {
     final String response =
-        await rootBundle.loadString('assets/data_event.json');
+        await rootBundle.loadString('data_event.json');
     final data = await json.decode(response);
     setState(() {
       _event = data["event"];
