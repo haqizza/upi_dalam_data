@@ -1,16 +1,16 @@
 import 'dart:developer';
 import 'dart:html';
+import 'dart:io';
 
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
+import 'package:socket_io_client/socket_io_client.dart';
 import 'package:upi_dalam_data/screens/homepage.dart';
 import 'package:upi_dalam_data/screens/notifications.dart';
 import 'package:upi_dalam_data/screens/highlights.dart';
 import 'package:upi_dalam_data/screens/dashboards.dart';
 import 'package:upi_dalam_data/widgets/topbar.dart';
-import 'package:upi_dalam_data/screens/infoDosen.dart';
-import 'package:upi_dalam_data/screens/infoDosen_detail.dart';
-import 'package:upi_dalam_data/screens/infoFakultas.dart';
-import 'package:upi_dalam_data/screens/infoFakultas_Detail.dart';
+import 'package:socket_io_client/socket_io_client.dart' as IO;
 
 void main() {
   runApp(const MainApp());
@@ -26,6 +26,62 @@ class MainApp extends StatefulWidget {
 class MainAppState extends State<MainApp> {
   int idx = 0;
   String topbarTitle = "";
+  IO.Socket socket = IO.io('http://localhost:3000');
+  late FToast fToast;
+
+  @override
+  void initState() {
+    super.initState();
+    connectToServer();
+    fToast = FToast();
+    fToast.init(context);
+  }
+
+
+  void showToast(msg) {
+    Fluttertoast.showToast(
+      msg: msg,
+      toastLength: Toast.LENGTH_LONG,
+      fontSize: 18.0,
+    );
+  }
+
+  void connectToServer() {
+    try {
+     
+      // Configure socket transports must be sepecified
+      socket = IO.io('http://localhost:3000', 
+        OptionBuilder()
+          .setTransports(['websocket'])
+          .disableAutoConnect()
+          .build()
+      );
+     
+      // Connect to websocket
+      socket.connect();
+     
+      // Handle socket events
+      socket.on('connect', (_) => print('connect: ${socket.id}'));
+      socket.on('notified', (_) => handleNewNotification);
+
+    } catch (e) {
+      print(e.toString());
+    }
+  }
+
+  void handleNewNotification(Map<String, dynamic> data) {
+    showToast(data["message"]);
+  }
+
+  sendMessage(String message) {
+    log(message);
+    socket.emit("notify",
+      {
+        "id": socket.id,
+        "message": message,
+      },
+    );
+  }
 
   void onItemTap(int index) {
     setState(() {
