@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:upi_dalam_data/screens/login.dart';
 
 class TopBar extends StatelessWidget implements PreferredSizeWidget{
   final Color backgroundColor = Colors.white;
@@ -40,16 +41,21 @@ class TopBar extends StatelessWidget implements PreferredSizeWidget{
             horizontal: 20
           ),
           child: ElevatedButton(
-            onPressed: () => {
-              Navigator.pop(context)
-            },
+            onPressed: () async => await Navigator.push(
+                            context,
+                              MaterialPageRoute(
+                                builder: (
+                                  (context) => MyApp()
+                                )
+              )
+            ),
             style: ElevatedButton.styleFrom(
               primary: const Color(0xFFFF0404),
             ),
             child: const Text(
               'Login',
               style: TextStyle(
-                color: Colors.white
+              color: Colors.white,
               ),          
             ),
           ),
