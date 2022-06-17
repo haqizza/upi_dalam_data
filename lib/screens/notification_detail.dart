@@ -64,10 +64,7 @@ class _NotificationDetailState extends State<NotificationDetail> {
             Padding(
               padding: const EdgeInsets.all(8),
               child: Text(
-                widget.notification['desc'],
-                overflow: TextOverflow.ellipsis,
-                maxLines: 4,
-                
+                widget.notification['desc']                
               )
             ),
             Padding(
