@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
                    Container(
                        padding: const EdgeInsets.all(10),
                        child: Image.asset(
-                         "image/logo.png",
+                         "images/logoUPI.png",
                          width: 150,
                        )),
                    
@@ -62,14 +62,10 @@ class MyApp extends StatelessWidget {
                 child: ElevatedButton(
                   child: const Text('Login'),
                   onPressed: () {
-                    print(nameController.text);
-                    print(passwordController.text);
+                    
                   },
                 )
-            ),
-            
-
-                 ])),
+            ),])),
            ],
          ),
        ),
