@@ -124,7 +124,6 @@ class _infoDosenPageState extends State<infoDosenPage> {
           const SizedBox(
             height: 35,
           ),
-          //listDosen(),
         ],
       ),
     );
@@ -157,28 +156,6 @@ class _infoDosenPageState extends State<infoDosenPage> {
       ),
     );
   }
-
-  // Widget listDosen() {
-  //   return searchDosen.isNotEmpty && dataSearch.isEmpty? 
-  //   Column(
-  //     children: [
-  //       const SizedBox(height: 20),
-  //       Center(child: Text('Dosen "$searchDosen" tidak ditemukan')),
-  //     ],
-  //   ): 
-  //   ListView.separated(
-  //     shrinkWrap: true,
-  //     itemCount: dataSearch.isEmpty && searchDosen.isEmpty? listDataDosen.length: dataSearch.length,
-  //     itemBuilder: (context, index) {
-  //       return itemDosen(dataSearch.isEmpty && searchDosen.isEmpty? listDataDosen[index]: dataSearch[index]);
-  //     },
-  //     separatorBuilder: (context, index) {
-  //     return const SizedBox(
-  //       height: 30,
-  //     );
-  //     },
-  //   );
-  // }
 
   Widget itemDosen(DosenItem item) {
     return SizedBox(
